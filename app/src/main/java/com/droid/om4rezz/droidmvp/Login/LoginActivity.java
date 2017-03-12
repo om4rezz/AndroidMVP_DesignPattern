@@ -37,6 +37,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
 
         presenter = new LoginPresenterImpl(this);
+
+        initEventDriven();
+    }
+
+    private void initEventDriven() {
+        btnLogin.setOnClickListener(this);
+        btnExit.setOnClickListener(this);
     }
 
     @Override
@@ -56,7 +63,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
 
     @Override
     public void showPasswordError() {
-        etUsername.setError(getString(R.string.password_error));
+        etPassword.setError(getString(R.string.password_error));
     }
 
     @Override

@@ -21,6 +21,8 @@ class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLoginFinis
         if(loginView != null){
             loginView.showProgress();
         }
+
+        loginInteractor.login(username, password, this);
     }
 
     @Override
