@@ -9,7 +9,7 @@ import java.util.List;
  * Created by om4rezz on 3/12/17.
  */
 
-class FindItemsInteractorImpl  implements FindItemsInteractor{
+class FindItemsInteractorImpl implements FindItemsInteractor {
 
     @Override
     public void findItems(final OnFinishedListener listener) {
